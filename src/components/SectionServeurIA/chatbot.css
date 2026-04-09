@@ -1,0 +1,179 @@
+/* ═══════════════════════ CHATBOT IA ═══════════════════════ */
+.chatbot {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+/* Trigger button */
+.chatbot__trigger {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(183, 134, 11, 0.5);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    border: none;
+    cursor: pointer;
+}
+
+.chatbot__trigger:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(183, 134, 11, 0.6);
+}
+
+/* Status dot */
+.chatbot__status-dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+}
+
+/* Chat window */
+.chatbot__window {
+    width: clamp(280px, 90vw, 340px);
+    background: var(--color-dark);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(13, 10, 5, 0.5);
+    display: none;
+    flex-direction: column;
+}
+
+.chatbot__window.open {
+    display: flex;
+}
+
+/* Header du chat */
+.chatbot__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1rem;
+    background: rgba(183, 134, 11, 0.15);
+    border-bottom: 1px solid rgba(183, 134, 11, 0.25);
+}
+
+.chatbot__title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary-light);
+    letter-spacing: 0.05em;
+}
+
+.chatbot__status {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: auto;
+    margin-right: 0.75rem;
+}
+
+.chatbot__close {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    padding: 0.25rem;
+}
+
+.chatbot__close:hover {
+    color: #fff;
+}
+
+/* Messages */
+.chatbot__body {
+    flex: 1;
+    max-height: 280px;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(183, 134, 11, 0.3) transparent;
+}
+
+.chatbot__message p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.chatbot__message--bot p {
+    background: rgba(255, 255, 255, 0.07);
+    border-left: 2px solid var(--color-primary);
+    padding: 0.625rem 0.875rem;
+    border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+}
+
+.chatbot__message--user p {
+    background: rgba(183, 134, 11, 0.2);
+    border-radius: var(--border-radius-lg) 0 var(--border-radius-lg) var(--border-radius-lg);
+    padding: 0.625rem 0.875rem;
+    text-align: right;
+    color: #fff;
+}
+
+/* Input */
+.chatbot__input-area {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot__input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    color: #fff;
+    transition: border-color var(--transition-fast);
+}
+
+.chatbot__input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.chatbot__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.chatbot__send {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: filter var(--transition-fast);
+    cursor: pointer;
+}
+
+.chatbot__send:hover {
+    filter: brightness(1.1);
+}

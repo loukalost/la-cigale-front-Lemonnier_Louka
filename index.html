@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Cigale – Brasserie Art Nouveau à Nantes depuis 1895</title>
+  <meta name="description" content="La Cigale, peut-être la plus belle brasserie du monde. Monument Historique classé au cœur de Nantes. Réservez votre table en ligne." />
+  <meta name="keywords" content="La Cigale, brasserie Nantes, Art Nouveau, Monument Historique, restaurant Nantes, réservation" />
+  <meta property="og:title" content="La Cigale – Brasserie Art Nouveau à Nantes" />
+  <meta property="og:description" content="Peut-être la plus belle Brasserie du monde. Inaugurée en 1895, classée Monument Historique." />
+  <meta property="og:type" content="restaurant" />
+
+  <!-- Fonts : Manrope (Stitch design system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/typography.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/animations.css" />
+  <link rel="stylesheet" href="/src/components/Header/header.css" />
+  <link rel="stylesheet" href="/src/components/Hero/hero.css" />
+  <link rel="stylesheet" href="/src/components/SectionPatrimoine/patrimoine.css" />
+  <link rel="stylesheet" href="/src/components/SectionCarte/carte.css" />
+  <link rel="stylesheet" href="/src/components/SectionReservation/reservation.css" />
+  <link rel="stylesheet" href="/src/components/SectionServeurIA/chatbot.css" />
+  <link rel="stylesheet" href="/src/components/Footer/footer.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ HEADER ═══ -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner container">
+      <a href="#" class="header__logo" aria-label="La Cigale – Accueil">LA CIGALE</a>
+
+      <nav class="header__nav" role="navigation" aria-label="Navigation principale">
+        <a href="#patrimoine" class="header__nav-link">Le Patrimoine</a>
+        <a href="#carte" class="header__nav-link">La Carte</a>
+        <a href="#salons" class="header__nav-link">Les Salons</a>
+        <a href="#privatisation" class="header__nav-link">Privatisation</a>
+        <a href="#histoire" class="header__nav-link">Histoire</a>
+        <a href="#contact" class="header__nav-link">Contact</a>
+      </nav>
+
+      <a href="#reservation" class="btn btn--primary header__cta" id="header-cta">
+        Réserver
+      </a>
+
+      <button
+        class="header__hamburger"
+        id="hamburger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="header-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav drawer -->
+    <div class="header__drawer" id="header-drawer" aria-hidden="true">
+      <nav aria-label="Navigation mobile">
+        <a href="#patrimoine" class="header__drawer-link">Le Patrimoine</a>
+        <a href="#carte" class="header__drawer-link">La Carte</a>
+        <a href="#salons" class="header__drawer-link">Les Salons</a>
+        <a href="#privatisation" class="header__drawer-link">Privatisation</a>
+        <a href="#histoire" class="header__drawer-link">Histoire</a>
+        <a href="#contact" class="header__drawer-link">Contact</a>
+        <a href="#reservation" class="btn btn--primary header__drawer-cta">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════ HERO ═══ -->
+    <section class="hero" id="hero" aria-label="Section d'accueil">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <span class="hero__badge">Un monument classé au cœur de Nantes</span>
+        <h1 class="hero__title">Peut-être la plus belle<br>Brasserie du monde</h1>
+        <p class="hero__subtitle">Depuis 1895 · Place Graslin · Nantes</p>
+
+        <div class="hero__ctas">
+          <a href="#patrimoine" class="btn btn--primary" id="hero-cta-decouvrir">
+            Découvrir le lieu
+          </a>
+          <a href="#reservation" class="btn btn--secondary btn--light" id="hero-cta-reserver">
+            Réserver ma table
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ PATRIMOINE ═══ -->
+    <section class="section-patrimoine" id="patrimoine" aria-labelledby="patrimoine-title">
+      <div class="container section-patrimoine__inner">
+
+        <div class="section-patrimoine__visual">
+          <img
+            src="/assets/images/patrimoine.webp"
+            alt="Intérieur Art Nouveau de La Cigale – mosaïques et sculptures Belle Époque"
+            width="700"
+            height="525"
+            loading="lazy"
+            class="section-patrimoine__image"
+          />
+        </div>
+
+        <div class="section-patrimoine__content">
+          <span class="eyebrow">L'Art de Vivre</span>
+          <h2 class="section-title" id="patrimoine-title">
+            Une immersion dans<br>le Siècle d'Or
+          </h2>
+          <p class="section-patrimoine__text">
+            Inaugurée en 1895, La Cigale est le chef-d'œuvre de l'architecte-céramiste
+            Émile Libaudière. Ses mosaïques chatoyantes, ses sculptures de bois sombre
+            et ses miroirs aux reflets d'or transportent nos hôtes dans l'effervescence
+            artistique de la Belle Époque.
+          </p>
+          <a href="#histoire" class="btn btn--secondary" id="patrimoine-cta">
+            Notre histoire
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ CARTE ═══ -->
+    <section class="section-carte" id="carte" aria-labelledby="carte-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow--light">Gastronomie</span>
+          <h2 class="section-title section-title--light" id="carte-title">
+            La Gastronomie en Scène
+          </h2>
+        </div>
+
+        <div class="card-grid" role="list">
+
+          <article class="card" role="listitem" aria-labelledby="card-signatures-title">
+            <div class="card__image-wrapper">
+              <img
+                src="/assets/images/signatures.webp"
+                alt="Plats signatures de La Cigale – cuisine française gastronomique"
+                width="400"
+                height="280"
+                loading="lazy"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" id="card-signatures-title">Les Signatures</h3>
+              <p class="card__text">
+                L'excellence de la tradition française revisitée avec audace par notre Chef.
+              </p>
+              <a href="#" class="btn btn--link" id="cta-signatures">
+                Consulter la carte →
+              </a>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="card-mer-title">
+            <div class="card__image-wrapper">
+              <img
+                src="/assets/images/fruits-de-mer.webp"
+                alt="Plateau de fruits de mer de La Cigale – produits frais de l'Atlantique"
+                width="400"
+                height="280"
+                loading="lazy"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" id="card-mer-title">Fruits de Mer</h3>
+              <p class="card__text">
+                Directement de nos côtes, le meilleur de l'Atlantique servi sur un plateau.
+              </p>
+              <a href="#" class="btn btn--link" id="cta-fruits-de-mer">
+                Découvrir le banc →
+              </a>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="card-the-title">
+            <div class="card__image-wrapper">
+              <img
+                src="/assets/images/salon-the.webp"
+                alt="Salon de thé de La Cigale – pâtisseries et thés d'exception"
+                width="400"
+                height="280"
+                loading="lazy"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" id="card-the-title">Salon de Thé</h3>
+              <p class="card__text">
+                Un après-midi suspendu entre pâtisseries fines et thés d'exception.
+              </p>
+              <a href="#" class="btn btn--link" id="cta-salon-the">
+                Douceurs d'après-midi →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ RÉSERVATION ═══ -->
+    <section class="section-reservation" id="reservation" aria-labelledby="reservation-title">
+      <div class="container section-reservation__inner">
+
+        <div class="section-reservation__info">
+          <span class="eyebrow">Votre table vous attend</span>
+          <h2 class="section-title" id="reservation-title">
+            Réserver votre table
+          </h2>
+          <p class="section-reservation__intro">
+            Assurez-vous un moment hors du temps dans l'un des décors les plus prisés de France.
+          </p>
+
+          <ul class="infos-pratiques" aria-label="Informations pratiques">
+            <li class="infos-pratiques__item">
+              <span class="infos-pratiques__label">Horaires</span>
+              <span class="infos-pratiques__value">Ouvert tous les jours de 07:30 à 00:30</span>
+            </li>
+            <li class="infos-pratiques__item">
+              <span class="infos-pratiques__label">Adresse</span>
+              <address class="infos-pratiques__value">
+                <a href="https://maps.google.com/?q=4+Place+Graslin+Nantes" target="_blank" rel="noopener">
+                  4 Place Graslin, 44000 Nantes
+                </a>
+              </address>
+            </li>
+            <li class="infos-pratiques__item">
+              <span class="infos-pratiques__label">Téléphone</span>
+              <a href="tel:+33251849494" class="infos-pratiques__value">02 51 84 94 94</a>
+            </li>
+          </ul>
+
+          <p class="section-reservation__confirm">
+            ✓ Confirmation instantanée par SMS ou E-mail.
+          </p>
+        </div>
+
+        <div class="section-reservation__form">
+          <form class="reservation-form" id="reservation-form" aria-label="Formulaire de réservation" novalidate>
+            <div class="form-group">
+              <label for="r-date" class="form-label">Date *</label>
+              <input type="date" id="r-date" name="date" class="form-input" required aria-required="true" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="r-time" class="form-label">Heure *</label>
+                <select id="r-time" name="time" class="form-input" required aria-required="true">
+                  <option value="">Choisir</option>
+                  <option>07:30</option><option>08:00</option><option>08:30</option>
+                  <option>12:00</option><option>12:30</option><option>13:00</option>
+                  <option>13:30</option><option>19:00</option><option>19:30</option>
+                  <option>20:00</option><option>20:30</option><option>21:00</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="r-guests" class="form-label">Couverts *</label>
+                <select id="r-guests" name="guests" class="form-input" required aria-required="true">
+                  <option value="">Nombre</option>
+                  <option>1</option><option>2</option><option>3</option>
+                  <option>4</option><option>5</option><option>6</option>
+                  <option>7</option><option>8</option><option value="9+">9+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="r-name" class="form-label">Nom *</label>
+              <input type="text" id="r-name" name="name" class="form-input" placeholder="Votre nom" required aria-required="true" autocomplete="family-name" />
+            </div>
+            <div class="form-group">
+              <label for="r-email" class="form-label">E-mail *</label>
+              <input type="email" id="r-email" name="email" class="form-input" placeholder="votre@email.com" required aria-required="true" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="r-phone" class="form-label">Téléphone</label>
+              <input type="tel" id="r-phone" name="phone" class="form-input" placeholder="06 xx xx xx xx" autocomplete="tel" />
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submit-reservation">
+              Confirmer ma réservation
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ HISTOIRE ═══ -->
+    <section class="section-histoire" id="histoire" aria-labelledby="histoire-title">
+      <div class="container">
+        <span class="eyebrow">Depuis 1895</span>
+        <h2 class="section-title" id="histoire-title">Un monument vivant</h2>
+        <p class="section-histoire__text">
+          Inaugurée en 1895, La Cigale est aujourd'hui l'une des plus anciennes brasseries de France
+          encore en activité. Classée Monument Historique, elle continue d'accueillir ses hôtes
+          dans un écrin de mosaïques, de stucs et de sculptures inspirées de la Belle Époque.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">LA CIGALE</span>
+        <address class="footer__address">
+          4 Place Graslin, 44000 Nantes<br>
+          <a href="tel:+33251849494">02 51 84 94 94</a>
+        </address>
+      </div>
+
+      <nav class="footer__nav" aria-label="Liens de pied de page">
+        <a href="#">Mentions Légales</a>
+        <a href="#">Presse</a>
+        <a href="#">Carrières</a>
+        <a href="#">Plan du Site</a>
+      </nav>
+
+      <p class="footer__copyright">
+        © 1895 La Cigale. Monument Historique.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════ CHATBOT IA ═══ -->
+  <div class="chatbot" id="chatbot" aria-live="polite">
+    <button
+      class="chatbot__trigger"
+      id="chatbot-trigger"
+      aria-label="Ouvrir l'assistant Maître d'Hôtel digital"
+      aria-expanded="false"
+      aria-controls="chatbot-window"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <span class="chatbot__status-dot" aria-hidden="true"></span>
+    </button>
+
+    <div class="chatbot__window" id="chatbot-window" aria-hidden="true" role="dialog" aria-label="Maître d'Hôtel digital">
+      <div class="chatbot__header">
+        <span class="chatbot__title">Maître d'Hôtel digital</span>
+        <span class="chatbot__status">En ligne pour vous servir</span>
+        <button class="chatbot__close" id="chatbot-close" aria-label="Fermer l'assistant">✕</button>
+      </div>
+      <div class="chatbot__body" id="chatbot-messages" role="log" aria-live="polite">
+        <div class="chatbot__message chatbot__message--bot">
+          <p>Bonjour ! Je suis là pour vous accompagner dans votre réservation ou répondre à vos questions sur notre patrimoine. Que puis-je faire pour vous ?</p>
+        </div>
+      </div>
+      <div class="chatbot__input-area">
+        <input
+          type="text"
+          class="chatbot__input"
+          id="chatbot-input"
+          placeholder="Votre message…"
+          aria-label="Votre message à l'assistant"
+        />
+        <button class="chatbot__send" id="chatbot-send" aria-label="Envoyer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

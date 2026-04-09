@@ -1,0 +1,9 @@
+/* ═══════════════════════ CARTE ═══════════════════════ */
+.section-carte {
+    padding-block: var(--section-padding-y);
+    background: var(--color-dark);
+}
+
+.section-carte .section-title {
+    margin-bottom: 0.5rem;
+}

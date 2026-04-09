@@ -1,0 +1,67 @@
+/* ═══════════════════════ RÉSERVATION ═══════════════════════ */
+.section-reservation {
+    padding-block: var(--section-padding-y);
+    background: var(--color-bg);
+}
+
+.section-reservation__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .section-reservation__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.section-reservation__intro {
+    font-size: var(--font-size-body);
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    max-width: 48ch;
+}
+
+.section-reservation__confirm {
+    font-size: var(--font-size-small);
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Formulaire wrapper */
+.reservation-form {
+    background: #fff;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: var(--border-radius-xl);
+    box-shadow: 0 8px 40px rgba(13, 10, 5, 0.1);
+    border: 1px solid var(--color-border);
+}
+
+/* ═══════════════════════ HISTOIRE ═══════════════════════ */
+.section-histoire {
+    padding-block: var(--section-padding-y);
+    background: var(--color-dark-mid);
+    text-align: center;
+}
+
+.section-histoire .eyebrow {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.section-histoire .section-title {
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.section-histoire__text {
+    max-width: 60ch;
+    margin-inline: auto;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: var(--font-size-body);
+    line-height: 1.8;
+}

@@ -1,0 +1,36 @@
+/* ═══════════════════════════════════════════════════════════════
+   typography.css — Styles typographiques globaux
+   ═══════════════════════════════════════════════════════════════ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family);
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+p {
+    font-size: var(--font-size-body);
+    line-height: 1.75;
+    color: var(--color-text-muted);
+}
+
+address {
+    font-style: normal;
+}
