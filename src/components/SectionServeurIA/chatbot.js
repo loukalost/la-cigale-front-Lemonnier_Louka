@@ -3,6 +3,8 @@
  * Message Stitch : "Bonjour, je suis votre Maître d'Hôtel digital..."
  */
 
+import { config } from '../../config.js';
+
 export function initChatbot() {
     const trigger = document.getElementById('chatbot-trigger');
     const window_ = document.getElementById('chatbot-window');
@@ -39,10 +41,10 @@ export function initChatbot() {
         // Réponse simulée
         setTimeout(() => {
             appendMessage(
-                'Je note votre message. Pour une réservation, vous pouvez remplir notre formulaire ou nous joindre au 02 51 84 94 94.',
+                config.chatbot.botResponse,
                 'bot'
             );
-        }, 900);
+        }, config.chatbot.messageDelay);
     };
 
     sendBtn?.addEventListener('click', sendMessage);

@@ -2,6 +2,8 @@
  * reservation.js – Validation basique du formulaire de réservation
  */
 
+import { config } from '../../config.js';
+
 export function initReservation() {
     const form = document.getElementById('reservation-form');
     if (!form) return;
@@ -25,9 +27,9 @@ export function initReservation() {
         // Succès (stub — à connecter à un vrai backend ou widget tiers)
         const btn = form.querySelector('[type="submit"]');
         const originalText = btn.textContent;
-        btn.textContent = '✓ Demande envoyée !';
+        btn.textContent = config.reservation.successMessage;
         btn.disabled = true;
-        btn.style.background = '#22c55e';
+        btn.style.background = config.reservation.successColor;
 
         setTimeout(() => {
             btn.textContent = originalText;
@@ -38,6 +40,6 @@ export function initReservation() {
                 const today = new Date().toISOString().split('T')[0];
                 dateInput.value = today;
             }
-        }, 4000);
+        }, config.reservation.successDelay);
     });
 }
